@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F9F7F3;
+  --color-text: #4A4A4A;
+  --color-card: #FFFFFF;
+  --color-primary: #FF9F1C;
+  --color-secondary: #2EC4B6;
+  --color-accent: #E71D36;
+  --color-shadow: #E5E5E5;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  --shadow-hard: 4px 4px 0px 0px #E5E5E5;
+  --shadow-hard-sm: 2px 2px 0px 0px #E5E5E5;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text antialiased;
+  }
+}
