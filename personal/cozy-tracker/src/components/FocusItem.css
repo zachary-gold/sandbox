@@ -1,0 +1,229 @@
+/* FocusItem Styles */
+
+.focus-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.focus-item:active {
+    transform: scale(0.98);
+}
+
+.focus-item.completed {
+    opacity: 0.6;
+    background: #f8f8f8;
+}
+
+.focus-item.overdue {
+    border-left: 3px solid #ffc107;
+}
+
+/* Checkbox */
+.item-checkbox {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s;
+}
+
+.item-checkbox:active {
+    transform: scale(1.2);
+}
+
+.item-checkbox.checked {
+    color: #4caf50;
+}
+
+/* Content */
+.item-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.item-title {
+    font-size: 15px;
+    color: #2d2d2d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-title.strikethrough {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.item-time {
+    color: #888;
+    font-size: 13px;
+}
+
+.overdue-badge {
+    flex-shrink: 0;
+}
+
+/* Pen emoji */
+.item-pen-emoji {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Claim button */
+.item-claim {
+    width: 32px;
+    height: 32px;
+    border: 2px dashed #ddd;
+    border-radius: 50%;
+    background: #fafafa;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.item-claim:hover {
+    border-color: #bbb;
+    background: #f0f0f0;
+}
+
+.item-claim.claimed {
+    border-style: solid;
+    border-color: #4caf50;
+    background: #e8f5e9;
+}
+
+.claim-placeholder {
+    opacity: 0.3;
+}
+
+/* Grocery nested items */
+.grocery-nested {
+    margin-left: 40px;
+    padding: 8px 0;
+}
+
+.grocery-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.grocery-item.completed {
+    opacity: 0.5;
+}
+
+.grocery-bullet {
+    font-size: 10px;
+    color: #888;
+}
+
+.grocery-title {
+    font-size: 14px;
+    color: #444;
+}
+
+.grocery-title.strikethrough {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Project card */
+.project-card {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.project-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5b21b6;
+}
+
+.project-progress {
+    font-size: 12px;
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.project-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.project-step.completed .step-checkbox {
+    color: #4caf50;
+}
+
+.project-step.current {
+    font-weight: 500;
+}
+
+.step-checkbox {
+    font-size: 16px;
+    color: #666;
+}
+
+.step-title {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.step-title.strikethrough {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.step-current-badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #7c3aed;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}

@@ -1,0 +1,143 @@
+/* Daily Note Prompt Styles */
+
+.note-prompt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.note-prompt-modal {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 340px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.note-prompt-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.note-prompt-emoji {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.note-prompt-header h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #2d2d2d;
+    margin: 0;
+}
+
+.note-prompt-message {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.note-prompt-message strong {
+    color: #2d2d2d;
+}
+
+.note-prompt-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #f0e6e0;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    resize: none;
+    transition: border-color 0.2s;
+}
+
+.note-prompt-input:focus {
+    outline: none;
+    border-color: #ffb6b9;
+}
+
+.note-prompt-input::placeholder {
+    color: #bbb;
+}
+
+.note-prompt-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.note-skip-button {
+    flex: 1;
+    padding: 14px;
+    background: #f5f0eb;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #888;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.note-skip-button:hover {
+    background: #e8e0d8;
+}
+
+.note-send-button {
+    flex: 1;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5d4037;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.note-send-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 154, 158, 0.4);
+}
+
+.note-send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

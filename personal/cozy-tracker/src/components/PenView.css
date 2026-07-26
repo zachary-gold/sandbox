@@ -1,0 +1,214 @@
+/* PenView Full-Screen Styles */
+
+.pen-view-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fdf8f5;
+    z-index: 1000;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.pen-view {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.pen-view-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #fff;
+    border-bottom: 1px solid #f0e6e0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.pen-view-header h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2d2d2d;
+    margin: 0;
+}
+
+.back-button {
+    padding: 8px 12px;
+    background: #f5f0eb;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.back-button:hover {
+    background: #e8e0d8;
+}
+
+.close-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #f5f0eb;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.close-button:hover {
+    background: #e8e0d8;
+}
+
+/* Category Grid */
+.pen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+}
+
+.pen-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 16px;
+    background: #fff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pen-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.pen-card:active {
+    transform: scale(0.98);
+}
+
+.pen-card.uncategorized {
+    background: #f5f0eb;
+}
+
+.pen-card-emoji {
+    font-size: 36px;
+}
+
+.pen-card-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.pen-card-count {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Item Cards */
+.item-cards {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.item-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-card-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d2d2d;
+    margin: 0 0 6px 0;
+}
+
+.item-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.item-card .due-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    background: #fff3e0;
+    color: #e65100;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.item-card .recurrence-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    background: #e3f2fd;
+    color: #1565c0;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.item-card .add-today-pill {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2e7d32;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.item-card .add-today-pill:hover {
+    background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+    transform: scale(1.02);
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: #888;
+}
+
+.empty-state p {
+    font-size: 15px;
+}

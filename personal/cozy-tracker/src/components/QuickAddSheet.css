@@ -1,0 +1,251 @@
+/* Quick Add Sheet Styles */
+
+.quick-add-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: flex-end;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.quick-add-sheet {
+    background: #fff;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 12px 20px 32px;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    margin: 0 auto 20px;
+}
+
+.quick-add-input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #f0e6e0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.quick-add-input:focus {
+    outline: none;
+    border-color: #ffb6b9;
+}
+
+.quick-add-input::placeholder {
+    color: #bbb;
+}
+
+/* Pen picker */
+.pen-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.pen-chip {
+    padding: 8px 14px;
+    background: #f5f0eb;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pen-chip:hover {
+    background: #e8e0d8;
+}
+
+.pen-chip.selected {
+    background: #fff5f0;
+    border-color: #ffb6b9;
+}
+
+/* Due date picker */
+.due-date-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #f0e6e0;
+    margin-top: 8px;
+}
+
+.due-date-row label {
+    font-size: 14px;
+    color: #666;
+}
+
+.due-date-input {
+    padding: 8px 12px;
+    border: 2px solid #f0e6e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #333;
+}
+
+.due-date-input:focus {
+    outline: none;
+    border-color: #ffb6b9;
+}
+
+/* Actions */
+.quick-add-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    flex: 1;
+    padding: 14px;
+    background: #f5f0eb;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #888;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cancel-button:hover {
+    background: #e8e0d8;
+}
+
+.add-submit-button {
+    flex: 2;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5d4037;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-submit-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 154, 158, 0.4);
+}
+
+.add-submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Recurrence Section */
+.recurrence-section {
+    border-top: 1px solid #f0e6e0;
+    margin-top: 8px;
+    padding-top: 12px;
+}
+
+.recurrence-section label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.recurrence-options {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.recurrence-chip {
+    padding: 8px 14px;
+    background: #f5f0eb;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.recurrence-chip:hover {
+    background: #e8e0d8;
+}
+
+.recurrence-chip.selected {
+    background: #e3f2fd;
+    border-color: #64b5f6;
+    color: #1565c0;
+}
+
+.day-picker {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.day-chip {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f0eb;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.day-chip:hover {
+    background: #e8e0d8;
+}
+
+.day-chip.selected {
+    background: #64b5f6;
+    border-color: #1565c0;
+    color: #fff;
+}
+
+/* Desktop max-width */
+@media (min-width: 768px) {
+    .quick-add-sheet {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
